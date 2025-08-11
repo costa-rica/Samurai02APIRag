@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='/css/style.css') }}">
+
+  <!-- LinkedIn Links -->
+  <meta name="theme-color" content="#000000">
+  <meta 
+  property="og:title"
+  content="Flask Starter"
+/><meta 
+  name="image"
+  property="og:image"
+  content="{{ url_for('bp_main.website_assets_favicon', filename='dd_and_flask_02-1200x627.png') }}"
+/><meta 
+  name="author"
+  content="Nick Rodriguez"
+/><meta 
+  property="og:description"
+  content="Starter Flask Project."
+/><meta 
+  property="og:url"
+  content="https://starter_flask_03.dashanddata.com"
+/>
+  <!-- icon for iPhone  shortcut -->
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('bp_main.website_assets_favicon', filename='database03-180x180.png') }}">
+  <!-- favicon - image on tabs of browser pages-->
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('bp_main.website_assets_favicon', filename='database03-16x16.png') }}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('bp_main.website_assets_favicon', filename='database03-32x32.png') }}">
+  <link rel="icon" type="image/png" sizes="64x64" href="{{ url_for('bp_main.website_assets_favicon', filename='database03-64x64.png') }}">
+
+
+  <title>Flask Starter</title>
+</head>
+<body >
+  {% block main %}{% endblock %}
+</body>
+</html>
