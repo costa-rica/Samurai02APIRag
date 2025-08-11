@@ -16,23 +16,17 @@ bp_rag.url_prefix = '/rag'
 @bp_rag.get("/ping")
 def ping():
     logger_bp_rag.info("-- in rag/ping route --")
-    return {"ok": True}
+    print("-- in rag/ping route --")
+    return {"message": "pong"}
 
 # GET /rag/build_index
 @bp_rag.get("/build-index")
 def build_index():
-    # logger_bp_rag.info("-- in rag/build_index route --")
+    logger_bp_rag.info("-- in rag/build_index route --")
     print("-- in rag/build_index route --")
     build_index_for_rag()
     return {"ok": True}
 
-# # GET /rag/build-prompt
-# @bp_rag.get("/build-prompt")
-# def build_prompt():
-#     logger_bp_rag.info("-- in rag/build-prompt route --")
-#     # prompt = create_prompt_manager()
-#     return {"ok": True}
-# POST /rag/build-prompt
 @bp_rag.post("/build-prompt")
 def build_prompt():
     # Parse JSON body
