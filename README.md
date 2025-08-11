@@ -22,7 +22,10 @@ This is only if you want to change the port from inside the app
 
 ```
 FLASK_APP=run
-FLASK_RUN_HOST=::
 FLASK_RUN_PORT=5050
 FLASK_DEBUG=1
 ```
+
+## test endpoint
+
+`curl -v http://127.0.0.1:5050/ping`
