@@ -11,7 +11,7 @@ bp_main = Blueprint('bp_main', __name__)
 @bp_main.get("/ping")
 def ping():
     logger_bp_main.info("-- in ping route --")
-    return {"ok": True}
+    return {"message": "pong"}
 
 @bp_main.get("/echo")
 def echo():
